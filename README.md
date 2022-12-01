@@ -12,10 +12,10 @@ $A\bigcap B$. The probability of this happening is exactly the value of the Jacc
 
 In the current implementation of the code, a mapping is first applied to the data in order to obtain distinct values. The following mappings are used:
 
--   Instructions: $(i + 1)*256 + C$ where C is the amount of time instruction i as been encountered in the instruction array.
--   Mechs: $x * 256 + y*32 + C + offset_{mech}$ where x and y are the position of the mech on the board, C is the amount of time a mech at location (x,y)
+-   Instructions: $(i + 1)*256 + C$ where $C$ is the amount of time instruction $i$ as been encountered in the instruction array.
+-   Mechs: $x * 256 + y*32 + C + offset_{mech}$ where $x$ and $y$ are the position of the mech on the board, $C$ is the amount of time a mech at location $(x,y)$
     as been encountered and $offset_{mech}$ is currently choosen as 2048.
--   Operators: $t * 256 + x * 16 + y + offset_{operator}$ where t is the type of the operator, x and y are the position of the operator on the board and
+-   Operators: $t * 256 + x * 16 + y + offset_{operator}$ where $t$ is the type of the operator, $x$ and $y$ are the position of the operator on the board and
     $offset_{operator}$ is currently choosen as 4096.
 
 Once this mapping as been applied for both solutions being compared, the MinHash value of the solutions can be calculated from the mappings. The
